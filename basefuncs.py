@@ -55,7 +55,7 @@ def asker(jsobj, key, prompts, asking=True):
             return value
 
 
-def update_routine(dataobj):
+def update_routine(dataobj): # Sollte ich einem Datamodel anfügen.
     """Eine Funktion zur Automatisierung des Updatesprozesses.
     Ein Datenobjekt wird benötigt.
     Die Datenbank wird hier aktualisiert"""
