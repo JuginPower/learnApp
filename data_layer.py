@@ -1,32 +1,38 @@
 import json
 from time import sleep as sl
+import mysql.connector
+
+
+mydb = mysql.connector.connect(
+    user="root",
+    host="localhost",
+    password="",
+    database="myprojects"
+)
+mycursor = mydb.cursor()
 
 
 class DataBank:
 
-    def read_database(self, pathname="data/database.json"):
+    def read_json(self, pathname="data/database.json"):
         with open(pathname, "r", encoding="utf-8") as jsf:
             json_orig = json.load(jsf)
 
         return json_orig
 
-    def write_database(self, jsnobj, pathname="data/database.json"):
+    def write_json(self, jsnobj, pathname="data/database.json"):
         with open(pathname, "w", encoding="utf-8") as json_file:
             json.dump(jsnobj, json_file, indent=4)
 
-    def ask_routine(self, prompt, values):
+    def get_id(self, tablename, attributname, valuename):
 
-        name = ""
+        sql = f"SELECT id from {tablename} WHERE {attributname}='{valuename}'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        return result[-1][-1]
 
-        while True:
-            name = input(f"Welches {prompt} möchten Sie auswählen?: ")
+    def insert_many(self, sql_string, values):
 
-            if name in values or name == "q":
-                break
-
-            else:
-                print(f"Das {prompt} {name} existiert nicht, bitte versuchen Sie es erneut.")
-                sl(2)
-                continue
-        
-        return name
+        mycursor.executemany(sql_string, values)
+        mydb.commit()
+        print("Rows inserted:", mycursor.rowcount)

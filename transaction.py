@@ -1,53 +1,37 @@
 import json
-import mysql.connector
+import data_layer
 
 
-mydb = mysql.connector.connect(
-    user="root",
-    host="localhost",
-    password="",
-    database="myprojects"
-)
-mycursor = mydb.cursor()
 vals = []
 
-with open("data/database.json", "r", encoding="utf-8") as fj:
-
-    content = json.load(fj)
-
-######################################
-
-sql = "INSERT INTO thema_learn (frage, antwort, quest_id, fach_category, thema_category) VALUES (%s, %s, %s, %s, %s)"
+dm = data_layer.DataBank()
+json_data = dm.read_json()
 person_id = 1
-fach_ids = [number+1 for number in range(len(content["fach"]))]
-themaidnumber = 0
 
-for key in content["fach"].keys():
+######################################
+sql = "INSERT INTO quest_learn (frage, antwort,	quest_id, fach_category, thema_category) VALUES (%s, %s, %s, %s, %s)"
 
-    len_thema = len(content["fach"][key]["thema"])
-    themaidnumber += len_thema
+for key in json_data["fach"].keys():
 
-thema_ids = [number+1 for number in range(themaidnumber)] # Wichtig für die Fragen und Antworten
+    fach_category = dm.get_id("fach_learn", "fach", key)
 
+    for thema in json_data["fach"][key]["thema"].keys():
 
-for key in content["fach"].keys():
+        quest_dict = json_data["fach"][key]["thema"].get(thema)
+        thema_category = dm.get_id("thema_learn", "thema", thema)
+        print()
 
-    fach_id = fach_ids.pop(0)
+        while True:
 
-    for key_thema in content["fach"][key]["thema"].keys():
+            if len(quest_dict["fragen"]) == 0 or len(quest_dict["antworten"]) == 0:
 
-        thema_id = thema_ids.pop(0)
-
-        for item in content["fach"][key]["thema"][key_thema].values(): # Die SChleife muss überarbeitet werden
-
-            frage = content["fach"][key]["thema"][key_thema]["fragen"].pop(0)
-            antwort = content["fach"][key]["thema"][key_thema]["antworten"].pop(0)
-            val = tuple([frage, antwort, person_id, fach_id, thema_id])
-            vals.append(val)
+                break
+            
+            frage = quest_dict["fragen"].pop(0)
+            antwort = quest_dict["antworten"].pop(0)
+            insert_row = tuple([frage, antwort, person_id, fach_category, thema_category])
+            vals.append(insert_row)
 
 
 ######################################
-mycursor.executemany(sql, vals)
-print()
-mydb.commit()
-print(mycursor.rowcount, "rows inserted")
+dm.insert_many(sql, vals)
