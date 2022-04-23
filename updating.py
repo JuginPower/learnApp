@@ -17,16 +17,16 @@ class Updater:
             if decision == "j":
                 neues_fach = self.new_topic("Fach")
                 fachmodel.insert_fach(neues_fach)
-                thema_decision = input("Wollen Sie Thema hinzufügen?(j/n) ")
+                thema_decision = input("Wollen Sie ein Thema hinzufügen?(j/n) ") # Ein Thema
                 
                 if thema_decision == "j":
                     neues_thema = self.new_topic("Thema")
-                    thema_id = themamodel.get_id(neues_thema)
-                    themamodel.insert_thema(neues_thema, thema_id)
+                    fach_id = fachmodel.get_id(neues_fach)
+                    themamodel.insert_thema(neues_thema, fach_id)
                     quest_decision = input("Wollen Sie neue Fragen und Antworten hinzufügen?(j/n) ")
 
                     if quest_decision == "j":
-                        fach_id = fachmodel.get_id(neues_fach)
+                        thema_id = themamodel.get_id(neues_thema)
                         self.make_quest(fach_id, thema_id)
 
                     elif quest_decision == "n":

@@ -55,7 +55,7 @@ class Learner:
         thema_list = thema_manager.get_thema(pk, fachnumber)
         self.show_content("Themen", thema_list)
         themaname = self.ask_routine("Thema", thema_list)
-        themanumber = thema_manager.get_id("thema_learn", "thema", themaname)
+        themanumber = thema_manager.get_id(themaname)
 
         questions = quest_manager.get_questans("frage", themanumber)
         answers = quest_manager.get_questans("antwort", themanumber, True)

@@ -12,7 +12,7 @@ class Fach(DataBank):
 
         """Get any id with the specified tablename, attributname and valuename for where"""
 
-        sql = f"SELECT id from fach_learn WHERE fach='{valuename}'"
+        sql = f"SELECT id FROM fach_learn WHERE fach='{valuename}'"
         mycursor.execute(sql)
         result = mycursor.fetchall()
         return result[-1][-1]
@@ -39,7 +39,7 @@ class Thema(DataBank):
 
         """Get any id with the specified tablename, attributname and valuename for where"""
 
-        sql = f"SELECT id from thema_learn WHERE thema='{valuename}'"
+        sql = f"SELECT id FROM thema_learn WHERE thema='{valuename}'"
         mycursor.execute(sql)
         result = mycursor.fetchall()
         return result[-1][-1]
@@ -96,3 +96,12 @@ class Quest(DataBank):
                 counter = 0
 
         return clean_string
+
+""" 
+test_fach = Fach()
+test_fach_id = test_fach.get_id("wirtschaft")
+test_thema = Thema()
+test_thema_id = test_thema.get_id("güterarten")
+test_quest = Quest()
+test_quest_id = test_quest.get_id("Was ist die Rechenschaftspflicht?")
+print() """
