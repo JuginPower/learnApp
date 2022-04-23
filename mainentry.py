@@ -1,5 +1,9 @@
-from time import sleep as sl
+from service import Alfred 
 
+
+"""Alfred help! I am poisoned"""
+
+supervisor = Alfred()
 
 print("Sie können auch 'q' drücken um das Programm jetzt zu beenden.")
 while True:
@@ -11,14 +15,13 @@ while True:
         break
 
     if decision == "u":
-        import updater
+        supervisor.insert_database()
         break
 
     elif decision == "l":
-        import learning
+        supervisor.learn()
         break
 
     else:
         print("Ungültige Antwort, bitte versuchen Sie nochmal.")
-        sl(2)
         continue

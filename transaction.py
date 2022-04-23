@@ -38,4 +38,4 @@ for key in json_data["fach"].keys():
 
 
 ######################################
-dm.insert_many(sql, vals)
+dm.insert_data(sql, vals, True)

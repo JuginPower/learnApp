@@ -1,9 +1,21 @@
-from sre_compile import isstring
-from data_layer import DataBank
-from time import sleep as sl
+from data_layer import DataBank, mycursor
 
 
-class Fach(DataBank):  
+class Fach(DataBank):
+
+    def insert_fach(self, fachname, fk_user=1):
+
+        sqlstring = "INSERT INTO fach_learn (fach, fach_id) VALUES (%s, %s)"
+        self.insert_data(sqlstring, (fachname, fk_user))
+
+    def get_id(self, valuename):
+
+        """Get any id with the specified tablename, attributname and valuename for where"""
+
+        sql = f"SELECT id from fach_learn WHERE fach='{valuename}'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        return result[-1][-1]
 
     def get_faecher(self, fk_user):
 
@@ -11,51 +23,26 @@ class Fach(DataBank):
         faecher_list = self.get_data(sql)
         return faecher_list
 
-    def show_content(self, topic, item_list):
-
-        print()
-        prompt = f"Folgende {topic} stehen zur Auswahl:"
-        bindestriche = ""
-        print(prompt)
-
-        for s in prompt:
-            bindestriche += "-"
-
-        print(bindestriche)
-
-        if isinstance(item_list, list):
-
-            for item in item_list:  
-                print("-" + item + "-")
-
-        else:
-            print("-" + item_list + "-")
-
-        print()
-    
-    def ask_routine(self, topic, item_list): # Sollte nicht im Datalayer liegen
-
-        name = ""
-
-        while True:
-            name = input(f"Welches {topic} möchten Sie auswählen?: ")
-
-            if name in item_list or name == "q":
-                break
-
-            else:
-                print(f"Das {topic} {name} existiert nicht, bitte versuchen Sie es erneut.")
-                sl(2)
-                continue
-        
-        return name
-
     def update_fach(self):
 
         pass
 
 
-class Thema(Fach):
+class Thema(DataBank):
+
+    def insert_thema(self, themaname, fk_fach, fk_user=1):
+
+        sqlstring = "INSERT INTO thema_learn (thema, thema_id, thema_category) VALUES (%s, %s, %s)"
+        self.insert_data(sqlstring, (themaname, fk_user, fk_fach))
+
+    def get_id(self, valuename):
+
+        """Get any id with the specified tablename, attributname and valuename for where"""
+
+        sql = f"SELECT id from thema_learn WHERE thema='{valuename}'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        return result[-1][-1]
 
     def get_thema(self, fk_user, fk_fach):
 
@@ -64,7 +51,21 @@ class Thema(Fach):
         return themen_list
 
 
-class Quest(Fach):
+class Quest(DataBank):
+
+    def insert_quest(self, frage, antwort, fk_fach, fk_thema, fk_user=1):
+
+        sqlstring = "INSERT INTO quest_learn (frage, antwort, quest_id, fach_category, thema_category) VALUES (%s, %s, %s, %s, %s)"
+        self.insert_data(sqlstring, (frage, antwort, fk_user, fk_fach, fk_thema))
+
+    def get_id(self, valuename):
+
+        """Get any id with the specified tablename, attributname and valuename for where"""
+
+        sql = f"SELECT id from quest_learn WHERE frage='{valuename}'"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        return result[-1][-1]
 
     def get_questans(self, columnname, fk_thema, cleaning=False):
 

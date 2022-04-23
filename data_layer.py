@@ -1,4 +1,3 @@
-from unittest import result
 import mysql.connector
 
 
@@ -36,9 +35,15 @@ class DataBank:
         else:
             return result[-1][-1]
 
-    def insert_many(self, sql_string, values):
+    def insert_data(self, sql_string, values, many=False):
 
-        mycursor.executemany(sql_string, values)
+        if many:
+            mycursor.executemany(sql_string, values)
+
+        else:
+            mycursor.execute(sql_string, values)
+
         mydb.commit()
         print("Rows inserted:", mycursor.rowcount)
+
 
