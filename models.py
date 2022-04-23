@@ -1,3 +1,4 @@
+from sre_compile import isstring
 from data_layer import DataBank
 from time import sleep as sl
 
@@ -12,6 +13,7 @@ class Fach(DataBank):
 
     def show_content(self, topic, item_list):
 
+        print()
         prompt = f"Folgende {topic} stehen zur Auswahl:"
         bindestriche = ""
         print(prompt)
@@ -21,8 +23,13 @@ class Fach(DataBank):
 
         print(bindestriche)
 
-        for item in item_list:
-            print("-" + item + "-")
+        if isinstance(item_list, list):
+
+            for item in item_list:  
+                print("-" + item + "-")
+
+        else:
+            print("-" + item_list + "-")
 
         print()
     
@@ -46,3 +53,21 @@ class Fach(DataBank):
     def update_fach(self):
 
         pass
+
+
+class Thema(Fach):
+
+    def get_thema(self, fk_user, fk_fach):
+
+        sql = f"SELECT thema FROM thema_learn WHERE thema_id={fk_user} AND thema_category={fk_fach}"
+        themen_list = self.get_data(sql)
+        return themen_list
+
+
+class Quest(Fach):
+
+    def get_questans(self, columnname, fk_thema):
+
+        sql = f"SELECT {columnname} from quest_learn WHERE thema_category={fk_thema}"
+        item_list = self.get_data(sql)
+        return item_list

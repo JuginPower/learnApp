@@ -42,7 +42,3 @@ class DataBank:
         mydb.commit()
         print("Rows inserted:", mycursor.rowcount)
 
-
-dm = DataBank()
-test_list = dm.get_data("SELECT fach FROM fach_learn WHERE fach_id=1")
-print(test_list)
