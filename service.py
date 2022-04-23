@@ -1,65 +1,69 @@
 from models import Fach, Thema, Quest
 
+class Alfred:
 
-pk = 1
+    """BF from Batman"""
 
-fach_manager = Fach()
-thema_manager = Thema()
-quest_manager = Quest()
-fach_list = fach_manager.get_faecher(pk)
-fach_manager.show_content("Fächer", fach_list)
+    def prepare_data(self, pk=1):
 
-fachname = fach_manager.ask_routine("Fach", fach_list)
-fachnumber = fach_manager.get_id("fach_learn", "fach", fachname)
-thema_list = thema_manager.get_thema(pk, fachnumber)
-thema_manager.show_content("Themen", thema_list)
-themaname = thema_manager.ask_routine("Thema", thema_list)
-themanumber = thema_manager.get_id("thema_learn", "thema", themaname)
+        fach_manager = Fach()
+        thema_manager = Thema()
+        quest_manager = Quest()
+        fach_list = fach_manager.get_faecher(pk)
+        fach_manager.show_content("Fächer", fach_list)
 
-questions = quest_manager.get_questans("frage", themanumber)
-answers = quest_manager.get_questans("antwort", themanumber, True)
+        fachname = fach_manager.ask_routine("Fach", fach_list)
+        fachnumber = fach_manager.get_id("fach_learn", "fach", fachname)
+        thema_list = thema_manager.get_thema(pk, fachnumber)
+        thema_manager.show_content("Themen", thema_list)
+        themaname = thema_manager.ask_routine("Thema", thema_list)
+        themanumber = thema_manager.get_id("thema_learn", "thema", themaname)
 
+        questions = quest_manager.get_questans("frage", themanumber)
+        answers = quest_manager.get_questans("antwort", themanumber, True)
 
-def notenmaker():
+        return {"fach": fachname, "thema": themaname,"fragen": questions, "antworten": answers}
 
-    while True:
+    def notenmaker(self):
 
-        weiter = input("\nEhrliche Selbsteinschätzung 'good' oder 'bad: ")
+        while True:
 
-        if weiter != 'good' and weiter != 'bad':
-            print("Flasche Eingabe")
-            continue
+            weiter = input("\nEhrliche Selbsteinschätzung 'good' oder 'bad: ")
 
-        elif weiter == 'good':
+            if weiter != 'good' and weiter != 'bad':
+                print("Flasche Eingabe")
+                continue
 
-            return 1
+            elif weiter == 'good':
 
-        elif weiter == 'bad':
+                return 1
 
-            return 0
+            elif weiter == 'bad':
 
-
-def time_maker(time_number):
-
-    hours = time_number//(60*60)
-    time_number -= 60*60*hours
-    minutes = time_number//60
-    time_number -= minutes*60
-    seconds = time_number
-
-    string_hours = number_to_string(hours)
-    string_minutes = number_to_string(minutes)
-    string_seconds = number_to_string(seconds)
-
-    return string_hours + ":" + string_minutes + ":" + string_seconds
+                return 0
 
 
-def number_to_string(number):
+    def time_maker(self, time_number):
 
-    if number < 10:
+        hours = time_number//(60*60)
+        time_number -= 60*60*hours
+        minutes = time_number//60
+        time_number -= minutes*60
+        seconds = time_number
 
-        return "0"+str(number)
+        string_hours = self.number_to_string(hours)
+        string_minutes = self.number_to_string(minutes)
+        string_seconds = self.number_to_string(seconds)
 
-    else:
+        return string_hours + ":" + string_minutes + ":" + string_seconds
 
-        return str(number)
+
+    def number_to_string(self, number):
+
+        if number < 10:
+
+            return "0"+str(number)
+
+        else:
+
+            return str(number)
