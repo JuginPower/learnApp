@@ -1,9 +1,10 @@
 from data_layer import DataBank
+from time import sleep as sl
 
 
-class Fach(DataBank): # Auf Mysql aktualisieren
+class Fach(DataBank): 
 
-    def __init__(self):
+    def __init__(self, pk, fk_user):
         
         self.__data = self.read_database()
         self.fachdata = ""
