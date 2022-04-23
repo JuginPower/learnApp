@@ -2,9 +2,10 @@ import time
 from random import shuffle
 from datetime import datetime
 from models import Fach, Thema, Quest
+from service import Alfred
 
 
-class Learner:
+class Learner(Alfred):
 
     def learn(self):
 
@@ -48,12 +49,12 @@ class Learner:
         thema_manager = Thema()
         quest_manager = Quest()
         fach_list = fach_manager.get_faecher(pk)
-        self.show_content("Fächer", fach_list)
+        fach_manager.show_faecher() # Muss jetzt auf den zuständigen Models laufen
 
         fachname = self.ask_routine("Fach", fach_list)
         fachnumber = fach_manager.get_id(fachname)
-        thema_list = thema_manager.get_thema(pk, fachnumber)
-        self.show_content("Themen", thema_list)
+        thema_list = thema_manager.get_themen(fachnumber)
+        thema_manager.show_themen(fachnumber)
         themaname = self.ask_routine("Thema", thema_list)
         themanumber = thema_manager.get_id(themaname)
 
@@ -61,45 +62,6 @@ class Learner:
         answers = quest_manager.get_questans("antwort", themanumber, True)
 
         return {"fach": fachname, "thema": themaname,"fragen": questions, "antworten": answers}
-
-    def show_content(self, topic, item_list):
-
-        print()
-        prompt = f"Folgende {topic} stehen zur Auswahl:"
-        bindestriche = ""
-        print(prompt)
-
-        for s in prompt:
-            bindestriche += "-"
-
-        print(bindestriche)
-
-        if isinstance(item_list, list):
-
-            for item in item_list:  
-                print("-" + item + "-")
-
-        else:
-            print("-" + item_list + "-")
-
-        print()
-    
-    def ask_routine(self, topic, item_list):
-
-        name = ""
-
-        while True:
-            name = input(f"Welches {topic} möchten Sie auswählen?: ")
-
-            if name in item_list or name == "q":
-                break
-
-            else:
-                print(f"Das {topic} {name} existiert nicht, bitte versuchen Sie es erneut.")
-                continue
-        
-        return name
-
 
     def notenmaker(self):
 

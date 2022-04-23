@@ -45,5 +45,3 @@ class DataBank:
 
         mydb.commit()
         print("Rows inserted:", mycursor.rowcount)
-
-

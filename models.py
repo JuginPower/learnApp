@@ -8,16 +8,14 @@ class Fach(DataBank):
         sqlstring = "INSERT INTO fach_learn (fach, fach_id) VALUES (%s, %s)"
         self.insert_data(sqlstring, (fachname, fk_user))
 
-    def get_id(self, valuename):
+    def get_id(self, fachname):
 
-        """Get any id with the specified tablename, attributname and valuename for where"""
-
-        sql = f"SELECT id FROM fach_learn WHERE fach='{valuename}'"
+        sql = f"SELECT id FROM fach_learn WHERE fach='{fachname}'"
         mycursor.execute(sql)
         result = mycursor.fetchall()
         return result[-1][-1]
 
-    def get_faecher(self, fk_user):
+    def get_faecher(self, fk_user=1):
 
         sql = f"SELECT fach FROM fach_learn WHERE fach_id={fk_user}"
         faecher_list = self.get_data(sql)
@@ -35,16 +33,14 @@ class Thema(DataBank):
         sqlstring = "INSERT INTO thema_learn (thema, thema_id, thema_category) VALUES (%s, %s, %s)"
         self.insert_data(sqlstring, (themaname, fk_user, fk_fach))
 
-    def get_id(self, valuename):
+    def get_id(self, themaname):
 
-        """Get any id with the specified tablename, attributname and valuename for where"""
-
-        sql = f"SELECT id FROM thema_learn WHERE thema='{valuename}'"
+        sql = f"SELECT id FROM thema_learn WHERE thema='{themaname}'"
         mycursor.execute(sql)
         result = mycursor.fetchall()
         return result[-1][-1]
 
-    def get_thema(self, fk_user, fk_fach):
+    def get_themen(self, fk_fach, fk_user=1):
 
         sql = f"SELECT thema FROM thema_learn WHERE thema_id={fk_user} AND thema_category={fk_fach}"
         themen_list = self.get_data(sql)
@@ -58,11 +54,9 @@ class Quest(DataBank):
         sqlstring = "INSERT INTO quest_learn (frage, antwort, quest_id, fach_category, thema_category) VALUES (%s, %s, %s, %s, %s)"
         self.insert_data(sqlstring, (frage, antwort, fk_user, fk_fach, fk_thema))
 
-    def get_id(self, valuename):
+    def get_id(self, questionname):
 
-        """Get any id with the specified tablename, attributname and valuename for where"""
-
-        sql = f"SELECT id from quest_learn WHERE frage='{valuename}'"
+        sql = f"SELECT id from quest_learn WHERE frage='{questionname}'"
         mycursor.execute(sql)
         result = mycursor.fetchall()
         return result[-1][-1]

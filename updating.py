@@ -1,8 +1,9 @@
 import re
 from models import Fach, Thema, Quest
+from service import Alfred
 
 
-class Updater:
+class Updater(Alfred):
 
     def insert_database(self):
 
@@ -17,7 +18,7 @@ class Updater:
             if decision == "j":
                 neues_fach = self.new_topic("Fach")
                 fachmodel.insert_fach(neues_fach)
-                thema_decision = input("Wollen Sie ein Thema hinzufügen?(j/n) ") # Ein Thema
+                thema_decision = input("Wollen Sie ein Thema hinzufügen?(j/n) ")
                 
                 if thema_decision == "j":
                     neues_thema = self.new_topic("Thema")
@@ -44,7 +45,60 @@ class Updater:
                     continue
 
             elif decision == "n":
-                break
+
+                thema_decision = input("Wollen Sie ein Thema zu einem bestehenden Fach hinzufügen?(j/n) ")
+
+                if thema_decision == "j":
+
+                    fachlist = fachmodel.get_faecher()
+                    self.show_content("Fach", fachlist)
+                    fach_name = self.ask_routine("Fach", fachlist)
+                    fachid = fachmodel.get_id(fach_name)
+                    themalist = themamodel.get_themen(fachid)
+                    thema_name = self.ask_routine("Thema", themalist)
+                    themamodel.insert_thema(thema_name, fachid)
+
+                    quest_decision = input("Wollen Sie neue Fragen und Antworten zu einem bestehendem Thema hinzufügen?(j/n) ")
+
+                    if quest_decision == "j":
+                        
+                        themaid = themamodel.get_id(thema_name)
+                        self.make_quest(fachid, themaid)
+
+                    elif quest_decision == "n":
+                        break
+
+                    else:
+                        print(error_prompt)
+                        continue
+
+                elif thema_decision == "n":
+                    
+                    quest_decision = input("Wollen Sie neue Fragen und Antworten zu einem bestehendem Thema hinzufügen?(j/n) ")
+
+                    if quest_decision == "j":
+
+                        fach_list = fachmodel.get_faecher()
+                        self.show_content("Fächer")
+                        fachname = self.ask_routine("Fach", fach_list)
+                        fachid = fachmodel.get_id(fachname)
+
+                        themalist = themamodel.get_themen(fachid)
+                        self.show_content("Themen")
+                        themaname = self.ask_routine("Thema", themalist)
+                        themaid = themamodel.get_id(themaname)
+                        self.make_quest(fachid, themaid)
+
+                    elif quest_decision == "n":
+                        break
+
+                    else:
+                        print(error_prompt)
+                        continue
+
+                else:
+                    print(error_prompt)
+                    continue
 
             else:
                 print(error_prompt)

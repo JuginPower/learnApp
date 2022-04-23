@@ -1,9 +1,7 @@
-from service import Alfred 
+from learning import Learner
+from updating import Updater
 
 
-"""Alfred help! I am poisoned"""
-
-supervisor = Alfred()
 
 print("Sie können auch 'q' drücken um das Programm jetzt zu beenden.")
 while True:
@@ -15,11 +13,13 @@ while True:
         break
 
     if decision == "u":
-        supervisor.insert_database()
+        updatemanager = Updater()
+        updatemanager.insert_database()
         break
 
     elif decision == "l":
-        supervisor.learn()
+        learnmanager = Learner()
+        learnmanager.learn()
         break
 
     else:
