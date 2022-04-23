@@ -15,7 +15,7 @@ while True:
         break
 
     elif decision == "l":
-        import learner
+        import learning
         break
 
     else:

@@ -1,10 +1,15 @@
+import json
 import data_layer
 
 
 vals = []
 
 dm = data_layer.DataBank()
-json_data = dm.read_json()
+
+with open("data/database.json", "r", encoding="utf-8") as jf:
+    json_data = json.load(jf)
+
+
 person_id = 1
 
 ######################################

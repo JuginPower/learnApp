@@ -66,8 +66,32 @@ class Thema(Fach):
 
 class Quest(Fach):
 
-    def get_questans(self, columnname, fk_thema):
+    def get_questans(self, columnname, fk_thema, cleaning=False):
 
         sql = f"SELECT {columnname} from quest_learn WHERE thema_category={fk_thema}"
         item_list = self.get_data(sql)
-        return item_list
+        
+        if cleaning == True:
+            clean_strings = []
+            for item in item_list:
+                clean = self.cut_string(item)
+                clean_strings.append(clean)
+            return clean_strings
+
+        else:
+            return item_list
+
+    def cut_string(self, roughstring):
+
+        clean_string = ""
+        counter = 0
+
+        for s in roughstring:
+            counter += 1
+            clean_string += s
+
+            if counter > 100 and s == " " or s == ".":
+                clean_string += "\n"
+                counter = 0
+
+        return clean_string

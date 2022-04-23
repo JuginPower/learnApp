@@ -1,0 +1,210 @@
+{
+    "fach": {
+        "wirtschaft": {
+            "thema": {
+                "aufgabenbr": {
+                    "fragen": [
+                        "Schutzaufgaben",
+                        "Gestaltungsaufgaben",
+                        "F\u00f6rderungsaufgaben",
+                        "\u00dcberwachungsaufgaben"
+                    ],
+                    "antworten": [
+                        "Unterst\u00fctzung der Eingliederung schwerbehinderter Arbeitnehmer und sonstiger schutzbed\u00fcrftiger Personen. D\u00fcrchsetzung von Ma\u00dfnahmen f\u00fcr \u00e4ltere Arbeitnehmer.F\u00f6rderung der Integration ausl\u00e4ndischer Arbeitnehmer.",
+                        "Entgegennahme von Anregungen von Arbeitnehmern und Mitgliedern der JAV (Jugend- und Auszubildendenvertretung). Beantragung und Durchsetzung von Ma\u00dfnahmen beim Arbeitgeber.",
+                        "D\u00fcrchsetzung der tats\u00e4chlichen Gleichstellung von M\u00e4nnern und Frauen. F\u00f6rderung der Vereinbarkeit von Familie und Erwerbst\u00e4tigkeit.Vorbereitung und D\u00fcrchf\u00fchrung der Wahl der JAV (Jugend- und Auszubildendenvertretung).F\u00f6rderung und Sicherung der Besch\u00e4ftigung im Betrieb.",
+                        "\u00dcberwachung der D\u00fcrchf\u00fchrung der zugunsten der Arbeitnehmer geltenden Gesetze, Verordnungen, Unfallverh\u00fctungsvorschriften und Betriebsvereinbarungen."
+                    ]
+                },
+                "g\u00fcterarten": {
+                    "fragen": [
+                        "Freie G\u00fcter",
+                        "Konsumg\u00fcter",
+                        "Produktionsg\u00fcter",
+                        "Wirtschaftsg\u00fcter",
+                        "Unterschied Produktionsg\u00fcter und Konsumg\u00fcter"
+                    ],
+                    "antworten": [
+                        "Freie G\u00fcter sind im \u00dcberfluss vorhanden und kosten deshalb grunds\u00e4tzlich kein Geld (z. B. Luft, Meersand).",
+                        "Finden in Haushalten Verwendung als Verbrauchsg\u00fcter (z.B. Milch) oder als Gebrauchsg\u00fcter (z.B. Waschmaschine)",
+                        "Finden in Betrieben Verwendung als Verbrauchsg\u00fcter (z.B. Spanplatten) oder als Gebrauchsg\u00fcter (z.B. eine Bands\u00e4ge).",
+                        "Wirtschaftsg\u00fcter sind alle G\u00fcter die die materiellen Bed\u00fcrfnisse der Menschen befriedigen und werden durch ihre Knappheit definiert. Daher m\u00fcssen die Menschen mit diesen G\u00fctern wirtschaften weil Sie nicht unbegrenzt verf\u00fcgbar sind wie Sonne und Luft.",
+                        "Beide G\u00fcterarten k\u00f6nnen als Gebrauchs- und Verbrauchsg\u00fcter dienen wie z.B. eine Waschmaschine oder eine Bands\u00e4ge. Der wesentliche Unterschied besteht darin dass Konsumg\u00fcter in Haushalten Verwendung finden und Produktionsg\u00fcter in Betrieben."
+                    ]
+                },
+                "wirtschaftsstufen": {
+                    "fragen": [
+                        "prim\u00e4rer Wirtschaftssektor",
+                        "sekund\u00e4rer Wirtschaftssektor",
+                        "terti\u00e4rer Wirtschaftssektor"
+                    ],
+                    "antworten": [
+                        "Der Prim\u00e4rsektor beinhaltet die Gewinnung von Rohstoffen, er ist der \u00e4lteste Sektor und wird auch Urproduktion genannt. Zu ihm geh\u00f6ren die Landwirtschaft, die Forstwirtschaft sowie die Fischerei.",
+                        "Im sekund\u00e4ren Sektor werden die Rohstoffe des Prim\u00e4rsektor ver- bzw. bearbeitet. Die Weiterverarbeitung erfolgt durch die Industrie, das Handwerk, das Baugewerbe, die Energiewirtschaft und die Wasserversorgung.",
+                        "Der Terti\u00e4rsektor besch\u00e4ftigt sich ausschlie\u00dflich mit Dienstleistungen. Deswegen wird er auch der Dienstleistungssektor genannt. Dienstleistungsbranchen sind zum Beispiel Kliniken, Banken und der Tourismus"
+                    ]
+                },
+                "ausbgesetze": {
+                    "fragen": [
+                        "Ausbildungsordnung",
+                        "Jugendarbeitschutzgesetz",
+                        "Arbeitszeitgesetz",
+                        "Berufsbildungsgesetz",
+                        "Entgeltfortzahlungsgesetz"
+                    ],
+                    "antworten": [
+                        "Beinhaltet die Bezeichnung des Ausbildungsberufes, der anerkannt wird. Legt die Ausbildungsdauer fest, die nicht mehr als drei und nicht weniger als zwei Jahre betragen soll. Beinhaltet den Ausbildungsrahmenplan, der dem Ausbilder sowie Auszubildenden als Vorgabe f\u00fcr den betrieblichen Ausbildungsplan dient. Beinhaltet den Rahmenlehrplan, der die angestrebten Kompetenzen sowie Unterrichtsinhalte f\u00fcr den berufsbezogenen Unterricht der Berufsschule beschreibt. Beinhaltet eine Pr\u00fcfungsordnung, in der die Zulassung zur Pr\u00fcfung und Gliederung der Pr\u00fcfung sowie das Bewerten der Pr\u00fcfungsleistungen geregelt sind.",
+                        "Alles Wichtige finden minderj\u00e4hrige Auszubildende im Jugendarbeitschutzgesetz. Man darf z.B. als Minderj\u00e4hriger nicht so viel arbeiten wie Vollj\u00e4hrige und man hat mehr Anspruch auf Urlaub. Erst wenn man vollj\u00e4hrig ist, wird das BBiG (Berufsbildungsgesetz) relevant.",
+                        "F\u00fcr vollj\u00e4hrige Auszubildende regelt das Arbeitszeitgesetz die Arbeitszeit.",
+                        "Das BBiG gibt Regelungen f\u00fcr die duale Ausbildung vor.Hier sind die Pflichten von Auszubildenden und Ausbilder definiert, genauso wie die Grundlagen f\u00fcr den Ausbildungsvertrag z.B. im \u00a711 BBiG die Vertragsniederschrift. Auch die Verg\u00fctung, Beginn und Beendigung eines Ausbildungsverh\u00e4ltnisses regelt das BBiG.",
+                        "Es wird auch EntgFG genannt und regelt das Gehalt, wenn man krank ist. Es ist auch wichtig f\u00fcr die Auszubildenden, weil es auch vorschreibt wie und wann man w\u00e4hrend der Ausbildung sich im Krankheitsfall melden muss."
+                    ]
+                },
+                "marktpreis": {
+                    "fragen": [
+                        "Angebotsmenge und Preis",
+                        "Nachfragemenge und Preis",
+                        "Der Preis im Verh\u00e4ltnis zu Angebots- und Nachfragemenge",
+                        "Verh\u00e4ltnis von Angebotsmenge, Nachfragemenge und Preis",
+                        "Gleichgewichtspreis",
+                        "Die verkaufte Menge (Umsatz)",
+                        "Beschreibung der Marktlage"
+                    ],
+                    "antworten": [
+                        "Die Angebotsmenge ist umso gr\u00f6\u00dfer, je 'gr\u00f6\u00dfer' der St\u00fcckpreis ist. Die Anbieter wollen also zu m\u00f6glichst 'hohen' Preisen verkaufen.",
+                        "Die Nachfragemenge ist umso gr\u00f6\u00dfer, je 'kleiner' der St\u00fcckpreis ist. Die Nachfrager wollen also zu m\u00f6glichst 'kleinen' Preisen kaufen.",
+                        "Ist der St\u00fcckpreis niedrig, so ist die angebotene Menge 'niedrig', die nachgefragte Menge hingegen hoch. Umgekehrt gilt: ist der St\u00fcckpreis hoch, so ist die angebotene Menge 'hoch', die nachgefragte Menge 'niedrig'.",
+                        "Die angebotene Menge steht also in einem geraden 'proportionalen' Verh\u00e4ltnis zum Preis. Die nachgefragte Menge in einem 'antiproportionalen' Verh\u00e4ltnis zum Preis.",
+                        "Bei einem bestimmten Preis sind Angebots- und Nachfragemenge identisch. Bei diesem Preis sind Angebot und Nachfrage im Gleichgewicht; deshalb nennt man ihn den 'Gleichgewichtspreis'.Kennzeichen dieses Preises: Die verkaufte Menge ist bei diesem Preis am 'h\u00f6chsten'. Es gibt weder einen Angebots- noch einen 'Nachfrage\u00fcberschuss'.",
+                        "Sie verh\u00e4lt sich bei steigenden Preisen wie folgt: zuerst 'steigt' sie bis zum Gleichgewichtspreis, danach 'sinkt' sie.",
+                        "Bei niedrigen Preisen ist die Angebotsmenge 'geringer' als die Nachfragemenge, d.h. es besteht ein 'Nachfrage\u00fcberschuss'. Bei relativ hohen Preisen ist die Angebotsmenge 'h\u00f6her' als die Nachfragemenge, d.h. es besteht ein 'Angebots\u00fcberschuss "
+                    ]
+                },
+                "produktionsfaktoren": {
+                    "fragen": [
+                        "Produktionsfaktor Arbeit",
+                        "Ausf\u00fchrende Arbeit",
+                        "Leitende Arbeit",
+                        "Produktionsfaktor Boden",
+                        "Produktionsfaktor Kapital"
+                    ],
+                    "antworten": [
+                        "Wird definiert als jede legale menschliche T\u00e4tigkeit, die auf die Erzielung von Einkommen gerichtet ist. Man unterscheidet zwischen der ausf\u00fchrend (exekutiven) und der leitenden (dispositiver) Arbeit.",
+                        "Die ausf\u00fchrende Arbeit umfasst T\u00e4tigkeiten, die i.d.R. weisungsabh\u00e4ngig sind und der unmittelbaren Bew\u00e4ltigung der t\u00e4glichen Routinearbeiten dienen. Zum Beispiel geh\u00f6rt zur ausf\u00fchrenden Arbeit eines Kellners das Tischdecken, die Beratung und Bedienung der G\u00e4ste, das Abr\u00e4umen des Tisches usw.",
+                        "Die leitende Arbeit dient der Planung, Organisation und Kontrolle des Produktionsablaufes und wird von leitenden Angestellten oder Firmeninhabern geleistet. So geh\u00f6rt beispielsweise zur leitenden Arbeit eines Supermarktes das Einteilen des Personalbedarfs, evtl. die Einstellung und K\u00fcndigung von Verkaufskr\u00e4ften, usw.",
+                        "Der Produktionsfaktor Boden l\u00e4sst sich in drei Kategorien untergliedern: Anbauboden -Zur Erzeugung wird er in der Land-, Forst- und Fischereiwirtschaft genutzt. Abbauboden - Wenn unersetzbare Stoffe abgebaut oder gef\u00f6rdert werden (Erze, \u00d6l...). Standortboden -dient als Standort f\u00fcr Unternehmen aus Industrie, Handwerk und Handel.",
+                        "Das ist der Einsatz von Werkzeugen, Maschinen und anderen Produktionsmitteln."
+                    ]
+                },
+                "\u00f6koprinzip": {
+                    "fragen": [
+                        "\u00d6konomische Prinzip",
+                        "Knappheit",
+                        "Maximalprinzip",
+                        "Minimalprinzip"
+                    ],
+                    "antworten": [
+                        "Das \u00f6konomische Prinzip geht von folgenden Annahme aus: Die menschlichen Bed\u00fcrfnisse sind unbegrenzt. Gleichzeitig stehen Mittel und G\u00fcter nicht in so ausreichendem Ma\u00dfe zur Verf\u00fcgung, dass damit alle Bed\u00fcrfnisse befriedigt werden k\u00f6nnten. Diesen Zustand bezeichnet man auch als Knappheit.",
+                        "Die Knappheit der G\u00fcter f\u00fchrt dazu, dass Menschen wirtschaften m\u00fcssen. Das bedeutet: Sie m\u00fcssen planvoll vorgehen, um die zur Verf\u00fcgung stehenden Mittel und G\u00fcter bestm\u00f6glich zu nutzen. Dabei werden zwei Vorgehensweisen unterschieden: das Maximalprinzip und das Minimalprinzip.",
+                        "Wer nach dem Maximalprinzip handelt, der m\u00f6chte mit gegebenen Mitteln einen gr\u00f6\u00dftm\u00f6glichen Erfolg erzielen. Beilspielsweise bem\u00fcht sich ein Unternehmen, mit einer gegebenen betrieblichen Ausstattung an Maschinen, Personal und Rohstoffen, eine m\u00f6glichst gro\u00dfe Produktionsmenge zu erhalten. Dieses Prinzip wird aus Haushaltsprinzip genannt.",
+                        "Wer nach dem Minimalprinzip handelt, der m\u00f6chte ein bestimmtes Ziel mit einem m\u00f6glichst geringen Mitteleinsatz erreichen. Beispielsweise versucht ein Unternehmen, eine festgelegte Materialmenge zu m\u00f6glichst geringen Kosten einzukaufen. Dieses Prinzip nennt man auch Sparprinzip."
+                    ]
+                }
+            }
+        },
+        "testfach": {
+            "thema": {
+                "testthema": {
+                    "fragen": [
+                        "testfrage"
+                    ],
+                    "antworten": [
+                        "testantwort"
+                    ]
+                }
+            }
+        },
+        "Informatik": {
+            "thema": {
+                "Wireless LAN": {
+                    "fragen": [
+                        "Was bedeutet der Begriff Infrastruktur-Modus?",
+                        "Erl\u00e4utern Sie drei m\u00f6gliche Gr\u00fcnde warum die Datentransferrate eines WLAN-Access-Point nicht den angegebenen Werten entsprechen kann.",
+                        "Erkl\u00e4ren Sie die Funktionsweise von Power over Ethernet (PoE) im Mode A",
+                        "Welche Aufgaben \u00fcbernimmt der authenticator in einem WLAN-Netzwerk?",
+                        "Was versteht man unter einem WLAN Ad-hoc Netzwerk?",
+                        "Was bedeutet Intra-cell Repeating?",
+                        "Was bedeutet Walled Garden?",
+                        "Was ist unter credentials zu verstehen?",
+                        "Erl\u00e4utern Sie das Verfahren CSMA/CA.",
+                        "Aus welchen Gr\u00fcnden wird CSMA/CD nicht verwendet?"
+                    ],
+                    "antworten": [
+                        "Als Infrastruktur-Modus bezeichnet man den Netzwerkbetrieb eines Wireless LAN mithilfe eines Access Points. Dies kannein WLAN-Router, Switch oder ein reiner AP sein der alle WLAN-Clients zu einem drahtlosen Netzwerk zusammenfasst und damit s\u00e4mtliche Netzwerkfunktionen zur Verf\u00fcgung stellt.",
+                        "Die Datentransferrate h\u00e4ngt zum einem von den Zugriffsverfahren ab wie alle Clients im WLAN-Netzwerk die Sendeberechtigungen aushandeln. Ein weiterer wichtiger Grund ist die Distanz zwischen Client und Access Point sowie W\u00e4nde und Decken. St\u00f6rungen von fremden Funksystemen k\u00f6nnen sich auch negativ auf die Modulation des Funksignals auswirken und somit sinkt auch die Datentransferrate.",
+                        "Beim PoE im Mode A findet eine Phantom-Speisung auch Fernspeisung genannt statt. Das bedeutet dass Strom auf den Datenf\u00fchrenden Adernpaaren \u00fcbertragen wird. Auf Pin 1 und 2 erhalten die Ger\u00e4te Daten und durch Phantomspeisung \u00fcbertragene positive Spannung. Die \u00dcbertragung von Daten und negativer Spannung findet auf den Pins 3 und 6 statt.",
+                        "Der authenticator kann ein WLAN-Access-Point oder eine switch sein und agiert als eine Art W\u00e4chter wenn ein Client-Ger\u00e4t eine Verbindung herstellen m\u00f6chte. Der authenticator leitet die Anmeldeinformationen des Clients an den authentication server weiter, der dann \u00fcber die G\u00fcltigkeit der aten entscheidet.",
+                        "Im Ad-Hoc Modus wird kein AP ben\u00f6tigt. Zwei Endger\u00e4te k\u00f6nnen eine Verbindung aufbauen und Daten austauschen. Bei der Einrichtung sind keine weiteren aktiven Elemente erforderlich. Die Hosts kommunizieren direkt \u00fcber ihre WLAN-Adapter. Solange sich die Hosts gegenseitig in Reichweite befinden, ist eine Kommunikation zwischen den Hosts m\u00f6glich.",
+                        "Damit kann man einstellen ob die Kommunikation zwischen den per WLAN verbundenen Benutzern innerhalb einer Funkzelle erlaubt sein soll.",
+                        "Es ist eine geschlossene Platform auf der Restriktionen vom Betreiber festgellegt sind, auf den der Benutzer nur zugelassene Anwendungen benutzen kann oder nur bestimmte Websites besuchen darf.",
+                        "Unter credentials in einem WLAN-Netzwerk versteht man Benutzernamen, Passw\u00f6rter oder digitale Zertifikate die zur Authentikation der Clients dienen.",
+                        "CSMA/CA steht f\u00fcr Carrier Sense Multiple Access/Collision Avoidance. Bei dem Verfahren nimmt der zentrale AP Anfragen an und erteilt einem der Ger\u00e4te den Zugriff auf den \u00dcbertragungskanal. Dieses Verfahren wird eingesetzt wenn ein Endger\u00e4t mit einem zentralen AP verbunden ist aber ein anderes Endger\u00e4t detektieren muss das auf der gegen\u00fcberliegenden Ende der maximalen Reichweite des AP befindet.",
+                        "Bei langen Leitungen, sehr vielen Stationen (wenn sie \u00fcber 30 % der Bandbreite des Ethernetzes ausnutzen), vielen Repeatern (Signalaufbereiter und Verst\u00e4rker) entstehen unterschiedliche Signallaufzeiten die zu h\u00e4ufigen Kollisionen der Funksignalen f\u00fchren. Hier wird das CSMA/CD (Carrier Sense Multiple Access with Collision Detection) nicht verwendet."
+                    ]
+                },
+                "Netzwerkprotokolle": {
+                    "fragen": [
+                        "Was ist ein Netzwerk?",
+                        "Was ist ein Protokoll?",
+                        "Was ist ein Server?",
+                        "Was ist ein Client?",
+                        "Wof\u00fcr steht die Abk\u00fcrzung HTTP?",
+                        "Wie hei\u00dft die oberste Ebene der Netzwerkkommunikation?",
+                        "Wie hei\u00dft die zweite Ebene der Netzwerkkommunikation?",
+                        "Wof\u00fcr steht SYN und SYNACK? Wozu wird es genutzt im TCP?",
+                        "Was passiert wenn eine Datei zu gro\u00df ist um sie als Paket zu verschicken?",
+                        "Wof\u00fcr werden die Datenpakete nummeriert?",
+                        "Wof\u00fcr steht UDP, wof\u00fcr wird es genutzt und warum?",
+                        "Wie hei\u00dft die dritte Schicht der Netzwerkkommunikation und wie hei\u00dft das genutzte Protokoll?",
+                        "Was ist eine IP und woraus besteht sie?",
+                        "Was bedeutet :: in der IP Adresse?",
+                        "Was ist eine Subnetzmaske und was sagt sie aus?",
+                        "Was ist IPv4 und welche Form hat es?",
+                        "Wof\u00fcr steht DNS und was beinhaltet sie?",
+                        "Was ist eine Link Local IMAC Adresse?",
+                        "Wof\u00fcr steht NDP und welche \u00dcbertragungsm\u00f6glichkeiten gibt es?",
+                        "Wie hei\u00dft die vierte Kommunikationsschicht und wie hei\u00dft die genutzte Spezifikation?",
+                        "Was ist ein Switch und was ist der Unterschied zu einem Hub?"
+                    ],
+                    "antworten": [
+                        "Das ist die Verbindung von mindestens zwei Computersystemen, entweder per Kabel oder drahtlos",
+                        "In der Informatik und in der Telekommunikation ist ein Protokoll eine Menge von Regeln, die Syntax, Semantik und Synchronisation der Kommunikation bestimmt. Handelt es sich um die Kommunikation in einem Rechnernetz, so spricht man von einem Netzwerkprotokoll.",
+                        "Es gibt zwei unterschiedliche Arten von Server: Ein Hardware Server bezeichnet einen Computer der seine Resourcen \u00fcber ein Netzwerk zur Verf\u00fcgung stellt. Auf ihm laufen neben dem Betriebssystem ein oder mehrere softwarebasierte Server. Oftmals wird ein hardwarebasierter Server auch Host genannt. Softwarebasierte Server: Ein softwarebasierter Server ist ein Programm, das einen speziellen Dienst anbietet. Dieser Dienst wird von anderen Programmen -auch Clienst genannt- lokal oder \u00fcber ein Netzwerk in Anspruch genommen.",
+                        "Bei einem CLient handelt es sich entweder um ein Computer bzw. Endger\u00e4t, das selbst Dienste von einem Server abruft. Oder es ist eine clientseitige Anwendung oder Clientprogramm, das auf dem Endger\u00e4t eines Netzwerks ausgef\u00fchrt wird und mit einem Server (Zentralrechner) kommuniziert.",
+                        "Http steht f\u00fcr Hypertext Transfer Protocol. Es ist ein zustandsloses Protokoll und dient der \u00dcbertragung von Daten auf der Anwendungsschicht \u00fcber ein Rechnernetz.",
+                        "Sie hei\u00dft Anwendungsschicht und ist nach dem OSI-Referenzmodell die oberste Ebene der NEtzwerkkommunikation. Die Anwendungsschicht f\u00fchrt Dienste f\u00fcr die Anwendung aus, die vom Endbenutzer verwendet werden.",
+                        "Nach dem OSI-Referenzmodell ist das die Sicherungsschicht. Sie erstellt und adressiert Frames f\u00fcr die Host-zu-Host \u00dcbertragung in lokalen Netzwerken (LANs) mithilfe von Netzzugangsger\u00e4ten.",
+                        "Es ist der Verbindungsaufbau in der TCP-Kommunikation. Der Verbindungsaufbau l\u00e4uft nach dem Three-Way-Handshake ab. Zuerst schickt der Client an den Server einen Verbindungswunsch (SYN). Der Server best\u00e4tigt den Erhalt der Nachricht (ACK) und \u00e4u\u00dfert ebenfalls seinen Verbindungswunsch (SYN). Danach erfolgt der Datenaustausch zwischen Client und Server.",
+                        "Die TCP-Software des Senders teilt die Daten auf mehrere Pakete auf, f\u00fcgt einen TCP-Header zu jedem Paket hinzu und versendet die TCP-Segmente. Dieser Vorgang wird Segmentierung genannt. Die TCP-Segmente werden nacheinander abgeschickt.",
+                        "Bei der Versendung der TCP-Segmente bzw Datenpakete kommen diese beim Empf\u00e4nger nicht notwendigerweise in derselben Reihenfolge an wie sie versendet wurden, da im Internet unter Umst\u00e4nden jedes TCP-Segment einen anderen Weg nimmt. Damit die TCP-Software beim Empf\u00e4nger die Datenpakete wieder sortieren kann, ist jedes Segment nummeriert.",
+                        "UDP ist ein minimales, verbindungsloses Netzwerkprotokoll, das zur Transportschicht geh\u00f6rt, nach dem OSI-Referenzmodell. UDP steht f\u00fcr User Datagram Protocol. UDP erm\u00f6glicht Anwendungen den Versand von Datagrammen. Das sind in sich geschlossene, unabh\u00e4ngige Dateneinheiten, die ohne weitere Verbindungssicherung zwischen zwei Endger\u00e4ten verschickt werden k\u00f6nnen. Dieses Verfahren ist konzeptionell sehr einfach und zeichnet sich vor allem durch seinen geringen Protokoll-Overhead aus, sprich nur die Empf\u00e4nger- und Absenderadressen  sowie die Nutzdaten sind enthalten. UDP ist ein nicht-zuverl\u00e4ssiges, ungesichertes \u00dcbertragungsprotokoll das aber sehr schnell ist. UDP wird h\u00e4ufig bei Servern eingesetzt, die viele Clients bedienen, Multimediaanwendungen oder Mini- und Mikrocomputer.",
+                        "Die dritte Schicht der Netzwerkkommunikation hei\u00dft Vermittlungsschicht und nutzt das IP Protokoll (Internet Protocol) und adressiert Pakete zum Ende-zu-Ende-Transport in andere Netzwerke.",
+                        "Das Internet Protokoll (IP) ist f\u00fcr die Weitervermittlung von Paketen und die Wegwahl (Routing) zust\u00e4ndig. Das Internetprotokoll existiert in der Version 4 oder 6 und besteht aus einem Netzanteil und einem Hostanteil. Der Netzanteil identifiziert ein Teilnetz, der Hostanteil identifiziert ein Ger\u00e4t (Host) innerhalb eines Teilnetzes. Das IP ist nach dem OSI-Referenzmodell in der Vermittlungsschicht angesiedelt.",
+                        "Die IPv6-Adressen verwenden 128 Bit zur Speicherung von Adressen und werden hexadezimal dargestellt. Um die Darstellung weiter zu vereinfachen, werden jeweils zwei Oktette der Adresse zusammengefasst und in Gruppen durch ein Doppelpunkt getrennt dargestellt. Zur weiteren Verk\u00fcrzung k\u00f6nnen Nullen am Beginn eines Blocks weggelassen werden. Ein oder mehrereaufeinander folgende Bl\u00f6cke, die nur aus Nullen bestehen, k\u00f6nnen durch :: ersetzt werden - jedoch h\u00f6chstens einmal in der Adresse, so dass eindeutig auf acht Bl\u00f6cke aufgef\u00fcllt werden kann.",
+                        "Die Netzmaske oder Subnetzmaske ist eine Bitmaske die Bestandteil der IPv4 und IPv6 Netzwerkprotokolle ist. Sie gibt an welche Bit-Position innerhalb der IP-Adresse f\u00fcr die Adressierung des Netz- und Host-Anteils genutzt werden soll. Der Netzanteil einer IPv4 oder IPv6-Adresse kann mit einer Pr\u00e4fixl\u00e4nge definiert werden. Das ist f\u00fcr die Adressierung des Netzanteils genutzte Bereich innerhalb der IP-Adresse. Daraus l\u00e4sst sich auch errechnen wie gro\u00df der Ger\u00e4teteil bzw Hostanteil der IP-Adresse ist. Da eine IPv4 Adresse immer eine 4 Oktetten lange Bitfolge und eine IPv6 eine 8 Oktetten lange Bitfolge besitzt. Die Pr\u00e4fixl\u00e4nge in einer Netzmaske kann man auch als Gr\u00f6\u00dfenangabe eines IP-Netzes verstehen, wobei gr\u00f6\u00dfere Pr\u00e4fixl\u00e4ngen kleinere Netze bedeuten, da nicht so viele Bits f\u00fcr Ger\u00e4teteile zur Verf\u00fcgung stehen.",
+                        "IPv4 (Internet Protocol Version 4) war die ersteVersion des Internet Protokolls und bildet eine wichtige technische Grundlage des Internets. Es benutzt32-Bit Adressen und kann in einem Rechnernetz etwas \u00fcber 4Mrd und 200 Tausend Adressen vergeben. IPv4-Adressen werden \u00fcblicherweise dezimal in vier Bl\u00f6cken geschrieben. Jedes Oktett repr\u00e4sentiert 8 Bit. Eine Ipv4-Adresse besteht aus einem Netzanteil, das ein Teilnetz identifiziert und einem Hostanteil, das ein Ger\u00e4t (Host) innerhalb eines Teilnetzes identifiziert deren genaue Aufteilung durch eine Subnetzmaske festgelegt wird.",
+                        "DNS steht f\u00fcr Domain Name System und die Aufgabe dieses Systems ist die Beantwortung von Anfragen zur Namensaufl\u00f6sung in IP-basierten Netzwerken. Haupts\u00e4chlich wird das DNS zur Umsetzung von Domainnamen in IP-Adressen (forward lookup) benutzt.",
+                        "Eine Link Local Adresse ist eine Netzwerkadresse und wird für die lokale Kommunikation innerhalb des Netzwerksegments gebraucht. Die MAC-Adresse (Media-Access-Control-Adress, auch Media Access Code) ist die Nummer eines Gerätes auf einer Datenverbindung und dient als eindeutiger Indentifikator des Geräts in einem Rechnernetz.",
+                        "NDP steht f\u00fcr Neighbor Discovery Protocol und wird daf\u00fcr benutzt IPv6-Adressen in Link-Layer-Adressen aufzul\u00f6sen, damit der sendende Rechner wei\u00df, wohin er sein Paket zu schicken hat. Diese Link-Layer-Adressen dienen der Host-zu-Host-\u00dcbertragung in lokalen Netzwerken. NDP ist zwischen der Sicherungsschicht und bedient sich bei der \u00dcBertragung eine Neighbor Cache in dem er die Ergebnisse der Link-Layer-Adressaufl\u00f6sungen zwischenspeichert.",
+                        "Sie hei\u00dft Transportschicht und die genutzte Spezifikation sind das TCP und UDP Verfahren zur Netzwerkkommunikation.",
+                        "Switch bedeutet Schalter oder auch Verteiler genannt. Es sorgt innerhalb eines lokalen Netwerks daf\u00fcr dass die Datenpakete bzw Frames an ihr Ziel kommen. Switches arbeiten nach dem OSI-Referenzmodell auf Ebene 2-4. Ein Hub dagegen arbeitet ausschlie\u00dflich auf Ebene 1 des OSI-Modells. Wenn ein Datenpaket an einem der Ports vom Hub trifft, so leitet er das Paket an alle Teilnehmer in einem lokalen Netzwerk weiter. Ein Hub fungiert als gemeinsamer Verbindungspunkt f\u00fcr Ger\u00e4te in einem Netzwerk und ist keine Weiche wie der Switch."
+                    ]
+                }
+            }
+        }
+    },
+    "log": [
+        "[Datum: 2022-03-20 \tDauer: 00:01:08 \tErfolgsquote: 50% \tFach: Wirtschaft \tThema: \u00d6koprinzip]",
+        "[Datum: 2022-03-21 \tDauer: 00:50:08 \tErfolgsquote: 100% \tFach: Informatik \tThema: Wireless Lan]"
+    ]
+}
