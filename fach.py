@@ -2,52 +2,42 @@ from data_layer import DataBank
 from time import sleep as sl
 
 
-class Fach(DataBank): 
+class Fach(DataBank):  
 
-    def __init__(self, pk, fk_user):
-        
-        self.__data = self.read_database()
-        self.fachdata = ""
+    def get_faecher(self, fk_user):
 
-    def get_fach(self, name):
+        sql = f"SELECT fach FROM fach_learn WHERE fach_id={fk_user}"
+        faecher_list = self.get_data(sql)
+        return faecher_list
 
-        self.fachdata = self.__data["fach"].get(name)
+    def show_content(self, topic, item_list):
 
-    def show_content(self):
-
-        prompt = "Folgende Fächer stehen zur Auswahl:"
+        prompt = f"Folgende {topic} stehen zur Auswahl:"
         bindestriche = ""
         print(prompt)
 
-        for number in range(len(prompt)):
+        for s in prompt:
             bindestriche += "-"
 
         print(bindestriche)
 
-        for key in self.__data["fach"].keys():
-            print("-" + key + "-")
+        for item in item_list:
+            print("-" + item + "-")
 
         print()
-
-    def ask_fach(self):
-
-        fach_list = [k for k in self.__data["fach"].keys()]
-        self.show_content()
-        fach_name = self.ask_routine("Fach", fach_list)
-        self.get_fach(fach_name)
     
-    def ask_routine(self, prompt, values): # Sollte nicht im Datalayer liegen
+    def ask_routine(self, topic, item_list): # Sollte nicht im Datalayer liegen
 
         name = ""
 
         while True:
-            name = input(f"Welches {prompt} möchten Sie auswählen?: ")
+            name = input(f"Welches {topic} möchten Sie auswählen?: ")
 
-            if name in values or name == "q":
+            if name in item_list or name == "q":
                 break
 
             else:
-                print(f"Das {prompt} {name} existiert nicht, bitte versuchen Sie es erneut.")
+                print(f"Das {topic} {name} existiert nicht, bitte versuchen Sie es erneut.")
                 sl(2)
                 continue
         
