@@ -49,12 +49,12 @@ class Learner(Alfred):
         thema_manager = Thema()
         quest_manager = Quest()
         fach_list = fach_manager.get_faecher(pk)
-        fach_manager.show_faecher() # Muss jetzt auf den zuständigen Models laufen
+        self.show_content("Fächer", fach_list)
 
         fachname = self.ask_routine("Fach", fach_list)
         fachnumber = fach_manager.get_id(fachname)
         thema_list = thema_manager.get_themen(fachnumber)
-        thema_manager.show_themen(fachnumber)
+        self.show_content("Themen", thema_list)
         themaname = self.ask_routine("Thema", thema_list)
         themanumber = thema_manager.get_id(themaname)
 

@@ -17,20 +17,25 @@ class Updater(Alfred):
 
             if decision == "j":
                 neues_fach = self.new_topic("Fach")
-                fachmodel.insert_fach(neues_fach)
+                
                 thema_decision = input("Wollen Sie ein Thema hinzufügen?(j/n) ")
                 
                 if thema_decision == "j":
+                    fachmodel.insert_fach(neues_fach)
                     neues_thema = self.new_topic("Thema")
                     fach_id = fachmodel.get_id(neues_fach)
-                    themamodel.insert_thema(neues_thema, fach_id)
+                    
                     quest_decision = input("Wollen Sie neue Fragen und Antworten hinzufügen?(j/n) ")
 
                     if quest_decision == "j":
+                        
+                        themamodel.insert_thema(neues_thema, fach_id)
                         thema_id = themamodel.get_id(neues_thema)
                         self.make_quest(fach_id, thema_id)
 
                     elif quest_decision == "n":
+                        
+                        themamodel.insert_thema(neues_thema, fach_id)
                         break
 
                     else:
@@ -38,6 +43,7 @@ class Updater(Alfred):
                         continue
 
                 elif thema_decision == "n":
+                    fachmodel.insert_fach(neues_fach)
                     break
 
                 else:
@@ -55,6 +61,7 @@ class Updater(Alfred):
                     fach_name = self.ask_routine("Fach", fachlist)
                     fachid = fachmodel.get_id(fach_name)
                     themalist = themamodel.get_themen(fachid)
+                    self.show_content("Themen", themalist)
                     thema_name = self.ask_routine("Thema", themalist)
                     themamodel.insert_thema(thema_name, fachid)
 
@@ -79,12 +86,12 @@ class Updater(Alfred):
                     if quest_decision == "j":
 
                         fach_list = fachmodel.get_faecher()
-                        self.show_content("Fächer")
+                        self.show_content("Fächer", fach_list)
                         fachname = self.ask_routine("Fach", fach_list)
                         fachid = fachmodel.get_id(fachname)
 
                         themalist = themamodel.get_themen(fachid)
-                        self.show_content("Themen")
+                        self.show_content("Themen", themalist)
                         themaname = self.ask_routine("Thema", themalist)
                         themaid = themamodel.get_id(themaname)
                         self.make_quest(fachid, themaid)
@@ -99,6 +106,9 @@ class Updater(Alfred):
                 else:
                     print(error_prompt)
                     continue
+            
+            elif decision == "q":
+                break
 
             else:
                 print(error_prompt)
