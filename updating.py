@@ -60,24 +60,10 @@ class Updater(Alfred):
                     self.show_content("Fach", fachlist)
                     fach_name = self.ask_routine("Fach", fachlist)
                     fachid = fachmodel.get_id(fach_name)
-                    themalist = themamodel.get_themen(fachid)
-                    self.show_content("Themen", themalist)
-                    thema_name = self.ask_routine("Thema", themalist)
-                    themamodel.insert_thema(thema_name, fachid)
-
-                    quest_decision = input("Wollen Sie neue Fragen und Antworten zu einem bestehendem Thema hinzufügen?(j/n) ")
-
-                    if quest_decision == "j":
-                        
-                        themaid = themamodel.get_id(thema_name)
-                        self.make_quest(fachid, themaid)
-
-                    elif quest_decision == "n":
-                        break
-
-                    else:
-                        print(error_prompt)
-                        continue
+                    neues_thema = self.new_topic("Thema")
+                    themamodel.insert_thema(neues_thema, fachid)
+                    themaid = themamodel.get_id(neues_thema)
+                    self.make_quest(fachid, themaid)
 
                 elif thema_decision == "n":
                     
