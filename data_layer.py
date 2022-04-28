@@ -7,7 +7,7 @@ mydb = mysql.connector.connect(
     password="",
     database="myprojects"
 )
-mycursor = mydb.cursor()
+mycursor = mydb.cursor(buffered=True)
 
 
 class DataBank:
@@ -22,11 +22,18 @@ class DataBank:
             mycursor.execute(sql)
             
         except mysql.connector.errors.ProgrammingError:
-            return f"Table {tablename} not found."
+
+            try:
+                mycursor.execute(f"SELECT id from {tablename}")
+            except mysql.connector.errors.ProgrammingError:
+                return f"Table {tablename} not found."
+            else:
+                return f"Column {attributname} does not found."
 
         else:
             result = mycursor.fetchall()
             return result[-1][-1]
+
 
     def get_data(self, sql):
 

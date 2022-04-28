@@ -24,11 +24,11 @@ class TestDataLayer(unittest.TestCase):
         self.assertIsInstance(self.fach_id, int)
         self.assertIsInstance(self.thema_id, int)
         self.assertIsInstance(self.quest_id, int)
-        self.assertTrue(self.fail_id, "Table fhjgh not found.")
 
     def test_get_false_id(self):
 
-        self.assertTrue(self.fail_id2, "Column abc does not found.")
+        self.assertEqual(self.fail_id, "Table fhjgh not found.")
+        self.assertEqual(self.fail_id2, "Column abc does not found.")
 
 
 if __name__ == "__main__":
