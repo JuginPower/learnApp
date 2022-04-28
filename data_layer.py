@@ -5,7 +5,7 @@ mydb = mysql.connector.connect(
     user="root",
     host="localhost",
     password="",
-    database="myprojects"
+    database="test"
 )
 mycursor = mydb.cursor(buffered=True)
 
@@ -28,11 +28,16 @@ class DataBank:
             except mysql.connector.errors.ProgrammingError:
                 return f"Table {tablename} not found."
             else:
-                return f"Column {attributname} does not found."
+                return f"Column {attributname} not found."
 
         else:
             result = mycursor.fetchall()
-            return result[-1][-1]
+            try:
+                returning_value = result[-1][-1]
+            except IndexError:
+                return f"Value {valuename} for Column {attributname} not found."
+            else:
+                return returning_value
 
 
     def get_data(self, sql):
@@ -49,13 +54,23 @@ class DataBank:
         else:
             return result[-1][-1]
 
-    def insert_data(self, sql_string, values, many=False):
+    def insert_data(self, sql_string, values):
 
-        if many:
-            mycursor.executemany(sql_string, values)
+        try:
+            if isinstance(values, list):
+                mycursor.executemany(sql_string, values)
+
+            elif isinstance(values, tuple):
+                mycursor.execute(sql_string, values)
+
+        except mysql.connector.errors.ProgrammingError as programerror:
+            return programerror
+        
+        except mysql.connector.errors.InterfaceError as interfaceerror:
+            return interfaceerror
 
         else:
-            mycursor.execute(sql_string, values)
 
-        mydb.commit()
-        print("Rows inserted:", mycursor.rowcount)
+            mydb.commit()
+            print("Rows inserted:", mycursor.rowcount)
+            return mycursor.rowcount
