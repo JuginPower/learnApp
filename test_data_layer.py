@@ -2,7 +2,7 @@ import unittest
 from data_layer import DataBank
 
 
-class TestDataLayer(unittest.TestCase):
+class TestDataLayer(unittest.TestCase): # Überarbeiten, besser bestimmte Sachen überlegen die schief gehen könnten aber nicht sollten
 
     def setUp(self):
 

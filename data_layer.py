@@ -21,21 +21,19 @@ class DataBank:
         try:
             mycursor.execute(sql)
             
-        except mysql.connector.errors.ProgrammingError:
-
-            try:
-                mycursor.execute(f"SELECT id from {tablename}")
-            except mysql.connector.errors.ProgrammingError:
-                return f"Table {tablename} not found."
-            else:
-                return f"Column {attributname} not found."
+        except mysql.connector.errors.ProgrammingError as programerror:
+            return programerror
+        
+        except mysql.connector.errors.InterfaceError as interfaceerror:
+            return interfaceerror
 
         else:
             result = mycursor.fetchall()
+            
             try:
                 returning_value = result[-1][-1]
-            except IndexError:
-                return f"Value {valuename} for Column {attributname} not found."
+            except IndexError as indexerror:
+                return indexerror
             else:
                 return returning_value
 
