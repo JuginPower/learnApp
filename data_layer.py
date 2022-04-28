@@ -17,9 +17,16 @@ class DataBank:
         """Get any id with the specified tablename, attributname and valuename for where"""
 
         sql = f"SELECT id from {tablename} WHERE {attributname}='{valuename}'"
-        mycursor.execute(sql)
-        result = mycursor.fetchall()
-        return result[-1][-1]
+
+        try:
+            mycursor.execute(sql)
+            
+        except mysql.connector.errors.ProgrammingError:
+            return f"Table {tablename} not found."
+
+        else:
+            result = mycursor.fetchall()
+            return result[-1][-1]
 
     def get_data(self, sql):
 
