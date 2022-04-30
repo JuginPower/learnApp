@@ -30,15 +30,18 @@ class DataBank:
         else:
             result = mycursor.fetchall()
 
-            if isinstance(result, list):
-                pass
+            if isinstance(result, list) and len(result) > 1:
+                list_result = []
+                for item in result:
+                    list_result.append(item[-1])
+                return list_result
             
-            """ try:
+            try:
                 returning_value = result[-1][-1]
             except IndexError as indexerror:
                 return indexerror
             else:
-                return returning_value """
+                return returning_value
 
 
     def get_data(self, sql):

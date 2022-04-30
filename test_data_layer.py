@@ -18,18 +18,17 @@ class TestDataLayer(unittest.TestCase): # Überarbeiten, besser bestimmte Sachen
         self.assertIsInstance(one_fach_id, int)
         self.assertIsInstance(one_thema_id, int)
 
-        """ print(one_user_id)
-        print(one_fach_id)
-        print(one_thema_id) """
 
     def should_get_multiple_ids(self):
 
         multiple_ids = self.dm.get_id("thema_learn", "thema_category", 3)
         self.assertIsInstance(multiple_ids, list)
+        self.assertGreater(len(multiple_ids), 1)
 
-    """ def should_get_catched_errorstrings(self):
+    def should_get_catched_errorstrings(self):
 
-        pass """
+        id_error = self.dm.get_id("thema_learn", "thema_cat", 99)
+        self.assertEqual(id_error, "error")
 
 
 if __name__ == "__main__":
