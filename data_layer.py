@@ -29,13 +29,16 @@ class DataBank:
 
         else:
             result = mycursor.fetchall()
+
+            if isinstance(result, list):
+                pass
             
-            try:
+            """ try:
                 returning_value = result[-1][-1]
             except IndexError as indexerror:
                 return indexerror
             else:
-                return returning_value
+                return returning_value """
 
 
     def get_data(self, sql):

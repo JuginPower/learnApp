@@ -6,6 +6,7 @@
     "configurations": [
         {
             "name": "Python: Aktuelle Datei",
+            "python": "C:/xampp/htdocs/learnApp/learn-env/Scripts/python.exe",
             "type": "python",
             "request": "launch",
             "program": "${file}",
