@@ -22,10 +22,10 @@ class DataBank:
             mycursor.execute(sql)
             
         except mysql.connector.errors.ProgrammingError as programerror:
-            return programerror
+            return str(programerror)
         
         except mysql.connector.errors.InterfaceError as interfaceerror:
-            return interfaceerror
+            return str(interfaceerror)
 
         else:
             result = mycursor.fetchall()
@@ -39,24 +39,44 @@ class DataBank:
             try:
                 returning_value = result[-1][-1]
             except IndexError as indexerror:
-                return indexerror
+                return str(indexerror)
             else:
                 return returning_value
 
 
     def get_data(self, sql):
 
-        mycursor.execute(sql)
-        result = mycursor.fetchall()
+        """Get any Data from the sql order you give as a parameter"""
+
+        try:
+            mycursor.execute(sql)
+            result = mycursor.fetchall()
+
+        except mysql.connector.errors.ProgrammingError as programerror:
+            return str(programerror)
         
-        if len(result) > 1:
-            list_result = []
-            for item in result:
-                list_result.append(item[-1])
-            return list_result
+        except mysql.connector.errors.InterfaceError as interfaceerror:
+            return str(interfaceerror)
 
         else:
-            return result[-1][-1]
+        
+            if len(result) > 1:
+                list_result = []
+                for item in result:
+                    list_result.append(item[-1])
+                return list_result
+
+            else:
+                try:
+                    if len(result[-1]) > 1:
+                        return list(result[-1])
+
+                    elif result[-1][-1]:
+                        return result[-1][-1]
+
+                except IndexError as indexerror:
+                    return str(indexerror)
+                    
 
     def insert_data(self, sql_string, values):
 
@@ -68,10 +88,10 @@ class DataBank:
                 mycursor.execute(sql_string, values)
 
         except mysql.connector.errors.ProgrammingError as programerror:
-            return programerror
+            return str(programerror)
         
         except mysql.connector.errors.InterfaceError as interfaceerror:
-            return interfaceerror
+            return str(interfaceerror)
 
         else:
 
