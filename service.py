@@ -1,3 +1,4 @@
+"""Alfred heelp, Im poisoned!"""
 
 
 class Alfred():
