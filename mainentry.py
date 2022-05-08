@@ -1,4 +1,6 @@
-from time import sleep as sl
+from learning import Learner
+from updating import Updater
+
 
 
 print("Sie können auch 'q' drücken um das Programm jetzt zu beenden.")
@@ -11,14 +13,15 @@ while True:
         break
 
     if decision == "u":
-        import updater
+        updatemanager = Updater()
+        updatemanager.insert_database()
         break
 
     elif decision == "l":
-        import learner
+        learnmanager = Learner()
+        learnmanager.learn()
         break
 
     else:
         print("Ungültige Antwort, bitte versuchen Sie nochmal.")
-        sl(2)
         continue
