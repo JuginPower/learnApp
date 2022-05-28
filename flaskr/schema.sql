@@ -6,9 +6,6 @@ CREATE TABLE user_learn (
   passwort TEXT NOT NULL
 );
 
-INSERT INTO user_learn (id, benutzername, passwort) VALUES
-(1, 'jugin', 'balthazarkraft90');
-
 DROP TABLE IF EXISTS fach_learn;
 CREATE TABLE fach_learn (
   id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
