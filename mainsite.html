@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willkommen</title>
+</head>
+<body>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li :hover {
+  background-color: #111;
+}
+
+</style>
+<script>
+
+fetch('databus.php', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    'param': 'usersession',
+    'sql': 'SELECT fach FROM fach_learn WHERE fach_id=(?)',
+    'paramtype': 'i',
+    'arraytype': 'all'
+  })
+})
+.then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+  var newul = document.createElement('ul');
+  for (let fach of data) {
+    const newli = document.createElement('li');
+    const textnode = document.createTextNode(fach[0]);
+    newli.append(textnode);
+    const element = document.getElementById('navbar-hor');
+    element.appendChild(newli);
+    console.log("New List Element:", newli);
+  }
+})
+/* .catch((error) => {
+  console.error('Error:', error);
+}); */
+</script>
+<ul id="navbar-hor"></ul>
+<ul id="navbar-ver"></ul>
+<a href="logout.php">Logout</a>
+</body>
+</html>
